@@ -1,0 +1,3 @@
+parameters ( in x : I n t e g e r , in y : I n t e g e r , out r : I n t e g e r )
+   r = m u l t ( x , y )
+

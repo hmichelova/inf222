@@ -1,0 +1,17 @@
+parameters ( inout a r r a y : A r r a y )
+{
+  var s t a r t = s t a r t i n d e x ( a r r a y ) ;
+  var e n d = e n d i n d e x ( a r r a y ) ;
+  var i = s t a r t ;
+  while ( l e i n d e x ( i , e n d ) ) {
+    var j = s t a r t ;
+    while ( l e i n d e x ( j , d e c ( i ) ) ) {
+      var a i = g e t ( a r r a y , i ) ;
+      var a j = g e t ( a r r a y , j ) ;
+      if l e ( a i , a j ) then s w a p ( a r r a y , i , j ) ;
+      j = i n c ( j ) ;  
+    } ;
+    i = i n c ( i ) ;
+  } ;
+}
+

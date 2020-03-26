@@ -1,0 +1,1 @@
+parameters ( in a : B o o l e a n , in b : B o o l e a n , out c : B o o l e a n ) c = a n d ( a , b )

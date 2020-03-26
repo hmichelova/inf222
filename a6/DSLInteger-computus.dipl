@@ -1,0 +1,19 @@
+parameters ( inout y e a r : I n t e g e r , out m o n t h : I n t e g e r , out d a y : I n t e g e r )
+{
+  var a =  r e m  ( y e a r , n o 1 9 ( ) ) ;
+  var b = i d i v ( y e a r , n o 1 0 0 ( ) ) ;
+  var c =  r e m  ( y e a r , n o 1 0 0 ( ) ) ;
+  var d = i d i v ( b , n o 4 ( ) ) ;
+  var e =  r e m  ( b , n o 4 ( ) ) ;
+  var f = i d i v ( p l u s ( b , n o 8 ( ) ) , n o 2 5 ( ) ) ;
+  var g = i d i v ( p l u s ( m i n u s ( b , f ) , n o 1 ( ) ) , n o 3 ( ) ) ;
+  var h =  r e m  ( p l u s ( m i n u s ( m i n u s ( p l u s ( m u l t ( n o 1 9 ( ) , a ) , b ) , d ) , g ) , n o 1 5 ( ) ) , n o 3 0 ( ) ) ;
+  var i = i d i v ( c , n o 4 ( ) ) ;
+  var k =  r e m  ( c , n o 4 ( ) ) ;
+  var l =  r e m  ( m i n u s ( m i n u s ( p l u s ( p l u s ( n o 3 2 ( ) , m u l t ( n o 2 ( ) , e ) ) , m u l t ( n o 2 ( ) , i ) ) , h ) , k ) , n o 7 ( ) ) ;
+  var m = i d i v ( p l u s ( p l u s ( a , m u l t ( n o 1 1 ( ) , h ) ) , m u l t ( n o 2 2 ( ) , l ) ) , n o 4 5 1 ( ) ) ;
+  var n = i d i v ( p l u s ( m i n u s ( p l u s ( h , l ) , m u l t ( n o 7 ( ) , m ) ) , n o 1 1 4 ( ) ) , n o 3 1 ( ) ) ;
+  var o =  r e m  ( p l u s ( m i n u s ( p l u s ( h , l ) , m u l t ( n o 7 ( ) , m ) ) , n o 1 1 4 ( ) ) , n o 3 1 ( ) ) ;
+      m o n t h = n ;
+      d a y = p l u s ( o , n o 1 ( ) ) ;
+}

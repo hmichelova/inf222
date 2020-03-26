@@ -1,0 +1,10 @@
+parameters ( in x : I n t e g e r , in y : I n t e g e r , out q : I n t e g e r , out r : I n t e g e r )
+   {
+     q = n o 0 ( ) ;
+     r = x ;
+     while ( l e ( y , r ) ) {
+       r = m i n u s ( r , y ) ;
+       q = p l u s ( q , n o 1 ( ) )
+     } ;
+   }
+
