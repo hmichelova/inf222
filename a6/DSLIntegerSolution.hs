@@ -196,7 +196,7 @@ dslwordfun "idiv" [DSLwordIV i1, DSLwordIV i2] = DSLwordIV $ div i1 i2
 dslwordfun "rem" [DSLwordIV i1, DSLwordIV i2] = DSLwordIV $ rem i1 i2
 dslwordfun "gcd" [DSLwordIV i1, DSLwordIV i2] = DSLwordIV $ gcd i1 i2
 dslwordfun "lcm" [DSLwordIV i1, DSLwordIV i2] = DSLwordIV $ lcm i1 i2
-dslintegerfun "fact" [DSLintegerIV i] = DSLintegerIV $ fact i
+dslwordfun "fact" [DSLwordIV i] = DSLwordIV $ fact i
   where
     fact i = if i <= 0 then 1 else i * fact (i - 1)
 dslwordfun "sum3" [DSLwordIV i1, DSLwordIV i2, DSLwordIV i3] = 
