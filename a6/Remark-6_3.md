@@ -28,11 +28,11 @@
 `"0"`
 
 ## Explanation
-Results are different, because Haskell's implementation of `Integer` is "unbounded", which means that (almost) in any case is the result of arithmetic functions correct. 
+Results are different because Haskell's implementation of `Integer` is "unbounded", which means that (almost) in any case the result of arithmetic functions is correct. 
 
-Haskell's implementation of `Word16` has only 16 bits, which means that result of any arithmetic operation has to be between `0` and `2 ^ 16 = 65536`. 
+Haskell implementation of `Word16` has only 16 bits, which means that the result of any arithmetic operation has to be between `0` and `2 ^ 16 - 1 = 65535`. 
 
-Results are the same iff that all arithmetic operations are in bounds, e. g.
+Results are the same iff all arithmetic operations are within bounds, e. g.
 
 
 `> rundslintegerhaskell "DSLInteger-mult.dipl" "32767 2"`

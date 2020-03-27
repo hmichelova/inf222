@@ -4,7 +4,7 @@
 ## 6. 3. Understanding a domain: Integer DSL
 - add files `DSLIntegerSolution.hs`, `DSLInteger-sum3.dipl` and `Remark-6_3.pdf`
 - part 1
-  - (a) implemented integer constats and functions for the rest of this part
+  - (a) implemented integer constants and functions for the rest of this part
   - (b) `l` (less), `ge` (greater or equal), `g` (greater), `eq` (equal)
   - (c) `or` (disjunction), `xor` (exclusive disjunction)
   - (d) `gcd` (greatest common divisor), `lcm` (least common multiple), `fact` (factorial) and `sum3` (sum of 3 numbers)
