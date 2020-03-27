@@ -67,13 +67,13 @@ wellformedstmt senv (Assign name expr) = wellformedexpr senv (fst expr)
 wellformedstmt senv@(env : _) (Vardec name expr) = wellformedexpr senv (fst expr)
   && not (elem name env)
 wellformedstmt senv (Ifte expr stmt1 stmt2) = wellformedexpr senv (fst expr)
-  && wellformedstmt senv stmt1
-  && wellformedstmt senv stmt2
+  && wellformedstmt ([] : senv) stmt1
+  && wellformedstmt ([] : senv) stmt2
 wellformedstmt senv (Ift expr stmt) = wellformedexpr senv (fst expr)
-  && wellformedstmt senv stmt
+  && wellformedstmt ([] : senv) stmt
 wellformedstmt senv (While expr stmt) = wellformedexpr senv (fst expr)
-  && wellformedstmt senv stmt
-wellformedstmt senv (Block stmts) = wellformedstmtlist senv stmts
+  && wellformedstmt ([] : senv) stmt
+wellformedstmt senv (Block stmts) = wellformedstmtlist ([] : senv) stmts
 wellformedstmt _ Skip = True 
 
 -- | Testing the wellformedness of statement lists given a scoped environment of variables names.

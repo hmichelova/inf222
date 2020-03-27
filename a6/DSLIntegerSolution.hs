@@ -103,7 +103,7 @@ dslintegerfun "gcd" [DSLintegerIV i1, DSLintegerIV i2] = DSLintegerIV $ gcd i1 i
 dslintegerfun "lcm" [DSLintegerIV i1, DSLintegerIV i2] = DSLintegerIV $ lcm i1 i2
 dslintegerfun "fact" [DSLintegerIV i] = DSLintegerIV $ fact i
   where
-    fact i = if i <= 0 then 1 else i * fact (i - 1)
+    fact i = foldr (*) 1 [1 .. i]
 dslintegerfun "sum3" [DSLintegerIV i1, DSLintegerIV i2, DSLintegerIV i3] = 
   DSLintegerIV $ i1 + i2 + i3
 dslintegerfun "no0" [] = DSLintegerIV $ 0
@@ -198,7 +198,7 @@ dslwordfun "gcd" [DSLwordIV i1, DSLwordIV i2] = DSLwordIV $ gcd i1 i2
 dslwordfun "lcm" [DSLwordIV i1, DSLwordIV i2] = DSLwordIV $ lcm i1 i2
 dslwordfun "fact" [DSLwordIV i] = DSLwordIV $ fact i
   where
-    fact i = if i <= 0 then 1 else i * fact (i - 1)
+    fact i = foldr (*) 1 [1 .. i]
 dslwordfun "sum3" [DSLwordIV i1, DSLwordIV i2, DSLwordIV i3] = 
   DSLwordIV $ i1 + i2 + i3
 dslwordfun "no0" [] = DSLwordIV $ 0
